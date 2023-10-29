@@ -1,0 +1,150 @@
+body {
+  background-color: pink;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.style-ticTacToe {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  position: relative;
+  cursor: pointer;
+}
+
+.style-tile-1,
+.style-tile-2,
+.style-tile-3,
+.style-tile-4,
+.style-tile-5,
+.style-tile-6 {
+  border-bottom: 4px solid white;
+}
+
+.style-tile-1,
+.style-tile-4,
+.style-tile-7,
+.style-tile-2,
+.style-tile-5,
+.style-tile-8 {
+  border-right: 4px solid white;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.gameArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 4px solid white;
+  width: 50%;
+  padding: 20px;
+}
+
+.gameArea h1 {
+  color: black;
+}
+
+.gameArea button {
+  padding: 30px;
+  border: none;
+  outline: none;
+  width: 40%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.js-ticTacToe {
+  cursor: pointer;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.4;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.4;
+}
+
+/*STRIKES*/
+
+#strike {
+  position: absolute;
+  background-color: darkred;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+
+.strike-column-3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
